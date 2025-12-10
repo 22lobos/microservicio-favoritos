@@ -5,21 +5,24 @@ import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "favoritos")
-public class faboritos_service {
+public class Favorito {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private Long idUsuario;       // viene de tu usuarios-service
-    private Long idReporte;       // viene de tu reportes-mascotas-service
+    // viene de tu usuarios-service
+    private Long idUsuario;
+
+    // viene de tu reportes-mascotas-service
+    private Long idReporte;
 
     private LocalDateTime fechaAgregado;
 
-    @Column(length = 500)
-    private String nota;          // comentario opcional del usuario
+    @Column(length = 500) // comentario opcional del usuario
+    private String nota;
 
-    public faboritos_service() {
+    public Favorito() {
     }
 
     // ===== GETTERS & SETTERS =====

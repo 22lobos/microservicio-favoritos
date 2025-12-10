@@ -16,7 +16,7 @@ public class FavoritoService {
         this.repository = repository;
     }
 
-    // LISTAR FAVORITOS DE UN USUARIO
+    // LISTAR FAVORITOS DE UN USUARI
     public List<Favorito> listarPorUsuario(Long idUsuario) {
         return repository.findByIdUsuarioOrderByFechaAgregadoDesc(idUsuario);
     }
